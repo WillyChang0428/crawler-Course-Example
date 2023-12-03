@@ -74,7 +74,7 @@ let ParseTable = async (outputArray = [], page = 1, baseURL) => {
     output['dc.date'] = Tools.DateToISOFormat(date)
 
     // 將提問人保存到dc.creator
-
+    output['dc.creator'] = eleTr.find('td:eq(0)').html()
     // 搭配Python使用
     output['dc.language'] = await Tools.ShellSpawn(`python3 -c 'import locale; print(locale.getdefaultlocale())'`)
 
