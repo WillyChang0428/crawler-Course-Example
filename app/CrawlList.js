@@ -83,7 +83,7 @@ let ParseTable = async (outputArray = [], page = 1, baseURL) => {
     // 則移除註解「//」即可啟用
     // 請注意itemURL必須正確
 
-    //await CrawlItem(itemURL, output)
+    await CrawlItem(itemURL, output)
 
     // =================================================================
     
